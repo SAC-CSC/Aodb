@@ -1,0 +1,1128 @@
+2025-12-22T10:19:24.096+05:30  INFO 38236 --- [AODB] [main] com.industrial.AODB.AodbApplication      : Starting AodbApplication using Java 21.0.7 with PID 38236 (C:\Software\AODB_TCPIP\AODB\AODB\target\classes started by 711576 in C:\Software\AODB_TCPIP\AODB\AODB)
+2025-12-22T10:19:24.101+05:30  INFO 38236 --- [AODB] [main] com.industrial.AODB.AodbApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-12-22T10:19:25.396+05:30  INFO 38236 --- [AODB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-22T10:19:25.469+05:30  INFO 38236 --- [AODB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2025-12-22T10:19:25.963+05:30  INFO 38236 --- [AODB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5050 (http)
+2025-12-22T10:19:25.975+05:30  INFO 38236 --- [AODB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-22T10:19:25.977+05:30  INFO 38236 --- [AODB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-12-22T10:19:26.021+05:30  INFO 38236 --- [AODB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-22T10:19:26.022+05:30  INFO 38236 --- [AODB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1853 ms
+2025-12-22T10:19:26.293+05:30  INFO 38236 --- [AODB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-22T10:19:26.367+05:30  INFO 38236 --- [AODB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-12-22T10:19:26.416+05:30  INFO 38236 --- [AODB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-22T10:19:26.772+05:30  INFO 38236 --- [AODB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-22T10:19:26.810+05:30  INFO 38236 --- [AODB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-22T10:19:27.242+05:30  INFO 38236 --- [AODB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 631e706f-8742-4c29-aa68-4491c38452e1
+2025-12-22T10:19:27.243+05:30  INFO 38236 --- [AODB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-22T10:19:27.429+05:30  WARN 38236 --- [AODB] [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-22T10:19:27.459+05:30  INFO 38236 --- [AODB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-22T10:19:28.345+05:30  INFO 38236 --- [AODB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-22T10:19:29.263+05:30  INFO 38236 --- [AODB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-22T10:19:29.740+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:19:29.742+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:19:29.819+05:30  WARN 38236 --- [AODB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-22T10:19:29.852+05:30  INFO 38236 --- [AODB] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-12-22T10:19:30.300+05:30  INFO 38236 --- [AODB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5050 (http) with context path '/'
+2025-12-22T10:19:30.309+05:30  INFO 38236 --- [AODB] [main] com.industrial.AODB.AodbApplication      : Started AodbApplication in 6.685 seconds (process running for 14.921)
+2025-12-22T10:19:30.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:19:30.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:19:33.318+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 1): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:19:33.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:19:33.407+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:19:33.409+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:19:36.410+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 1): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:19:36.411+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:19:36.469+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:19:39.743+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:19:39.744+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:19:40.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:19:40.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:19:43.309+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 2): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:19:43.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:19:43.367+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:19:43.368+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:19:46.370+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 2): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:19:46.371+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:19:46.430+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:19:49.745+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:19:49.746+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:19:50.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:19:50.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:19:53.309+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 3): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:19:53.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:19:53.737+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:19:53.738+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:19:56.754+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 3): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:19:56.754+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:19:56.829+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:19:59.748+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:19:59.749+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:19:59.878+05:30  INFO 38236 --- [AODB] [http-nio-5050-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-22T10:19:59.879+05:30  INFO 38236 --- [AODB] [http-nio-5050-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-22T10:19:59.881+05:30  INFO 38236 --- [AODB] [http-nio-5050-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-22T10:20:00.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:20:00.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:03.330+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 4): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:03.332+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:03.441+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:03.441+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:06.445+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 4): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:06.446+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:06.519+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:09.765+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:20:09.767+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:20:10.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:20:10.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:13.313+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 5): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:13.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:13.376+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:13.377+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:16.392+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 5): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:16.393+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:16.457+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:19.777+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:20:19.778+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:20:20.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:20:20.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:23.318+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 6): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:23.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:23.393+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:23.394+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:26.399+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 6): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:26.400+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:26.471+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:29.782+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:20:29.782+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:20:30.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:20:30.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:33.319+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 7): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:33.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:33.389+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:33.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:36.401+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 7): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:36.401+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:36.469+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:39.796+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:20:39.797+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:20:40.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:20:40.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:43.311+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 8): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:43.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:43.366+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:43.367+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:46.371+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 8): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:46.371+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:46.432+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:49.802+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:20:49.817+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:20:50.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:20:50.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:53.320+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 9): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:53.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:53.389+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:53.390+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:20:56.406+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 9): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:20:56.407+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:20:56.476+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:20:59.820+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:20:59.822+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:21:00.318+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:21:00.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:03.328+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 10): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:03.328+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:03.399+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:03.400+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:06.402+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 10): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:06.402+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:06.462+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:09.830+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:21:09.831+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:21:10.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:21:10.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:13.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 11): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:13.326+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:13.388+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:13.389+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:16.401+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 11): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:16.401+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:16.463+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:19.842+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:21:19.844+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:21:20.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:21:20.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:23.315+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 12): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:23.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:23.369+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:23.370+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:26.384+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 12): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:26.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:26.442+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:29.854+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:21:29.869+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:21:30.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:21:30.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:33.322+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 13): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:33.323+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:33.407+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:33.407+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:36.427+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 13): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:36.428+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:36.492+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:39.884+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:21:39.886+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : connected to 127.0.0.1:9000
+2025-12-22T10:21:39.890+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Received: SERVER    {    HelloFromServer
+2025-12-22T10:21:39.973+05:30  WARN 38236 --- [AODB] [Thread-1] com.industrial.AODB.util.XmlHandler      : Invalid XML received: SERVER    {    HelloFromServer
+2025-12-22T10:21:40.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:21:40.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:42.986+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Exception in read loop: Read timed out
+2025-12-22T10:21:43.329+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 14): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:43.329+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:43.389+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:43.389+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:45.992+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Exception in read loop: Read timed out
+2025-12-22T10:21:46.397+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 14): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:46.398+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:46.463+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:49.005+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Exception in read loop: Read timed out
+2025-12-22T10:21:49.005+05:30  WARN 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Disconnected from 127.0.0.1:9000
+2025-12-22T10:21:49.006+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:21:49.007+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : connected to 127.0.0.1:9000
+2025-12-22T10:21:49.027+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Received: SERVER    {
+2025-12-22T10:21:49.030+05:30  WARN 38236 --- [AODB] [Thread-1] com.industrial.AODB.util.XmlHandler      : Invalid XML received: SERVER    {
+2025-12-22T10:21:49.030+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Received: HelloFromServer
+2025-12-22T10:21:49.031+05:30  WARN 38236 --- [AODB] [Thread-1] com.industrial.AODB.util.XmlHandler      : Invalid XML received: HelloFromServer
+2025-12-22T10:21:50.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:21:50.313+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:52.043+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Exception in read loop: Read timed out
+2025-12-22T10:21:53.322+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 15): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:53.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:53.382+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:53.383+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:21:55.050+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Exception in read loop: Read timed out
+2025-12-22T10:21:56.394+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 15): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:21:56.395+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:21:56.456+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:21:58.061+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Exception in read loop: Read timed out
+2025-12-22T10:21:58.061+05:30  WARN 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Disconnected from 127.0.0.1:9000
+2025-12-22T10:21:58.061+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:21:58.063+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : connected to 127.0.0.1:9000
+2025-12-22T10:21:58.063+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Received: SERVER    {
+2025-12-22T10:21:58.066+05:30  WARN 38236 --- [AODB] [Thread-1] com.industrial.AODB.util.XmlHandler      : Invalid XML received: SERVER    {
+2025-12-22T10:21:58.066+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Received: HelloFromServer
+2025-12-22T10:21:58.068+05:30  WARN 38236 --- [AODB] [Thread-1] com.industrial.AODB.util.XmlHandler      : Invalid XML received: HelloFromServer
+2025-12-22T10:22:00.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:22:00.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:00.938+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Exception in read loop: Connection reset
+2025-12-22T10:22:00.938+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Exception in read loop: Connection reset
+2025-12-22T10:22:00.938+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Exception in read loop: Connection reset
+2025-12-22T10:22:00.939+05:30  WARN 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Disconnected from 127.0.0.1:9000
+2025-12-22T10:22:00.939+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:22:00.941+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:22:03.327+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 16): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:03.328+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:03.396+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:03.397+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:06.404+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 16): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:06.405+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:06.500+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:10.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:22:10.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:10.942+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:22:10.943+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:22:13.325+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 17): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:13.325+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:13.390+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:13.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:16.394+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 17): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:16.394+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:16.463+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:20.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:22:20.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:20.957+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:22:20.958+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:22:23.314+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 18): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:23.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:23.378+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:23.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:26.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 18): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:26.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:26.447+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:30.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:22:30.323+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:30.962+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:22:30.977+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:22:33.337+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 19): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:33.338+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:33.396+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:33.396+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:36.402+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 19): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:36.403+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:36.473+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:40.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:22:40.318+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:40.985+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:22:40.986+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:22:43.327+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 20): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:43.327+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:43.391+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:43.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:46.401+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 20): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:46.401+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:46.488+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:50.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:22:50.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:50.992+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:22:50.993+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:22:53.325+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 21): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:53.325+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:53.397+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:22:53.398+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:22:56.401+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 21): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:22:56.401+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:22:56.463+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:00.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:23:00.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:00.996+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:23:00.997+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:23:03.313+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 22): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:03.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:03.369+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:03.369+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:06.382+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 22): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:06.383+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:06.442+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:10.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:23:10.323+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:11.006+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:23:11.008+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:23:13.331+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 23): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:13.331+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:13.406+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:13.406+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:16.423+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 23): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:16.423+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:16.486+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:20.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:23:20.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:21.016+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:23:21.017+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:23:23.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 24): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:23.327+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:23.391+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:23.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:26.399+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 24): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:26.400+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:26.461+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:30.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:23:30.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:31.026+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:23:31.027+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:23:33.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 25): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:33.327+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:34.578+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:34.578+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:37.593+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 25): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:37.594+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:37.661+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:40.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:23:40.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:41.033+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:23:41.034+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:23:43.331+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 26): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:43.331+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:43.392+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:43.393+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:46.395+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 26): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:46.396+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:46.460+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:50.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:23:50.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:51.040+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:23:51.042+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:23:53.337+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 27): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:53.338+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:53.391+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:23:53.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:23:56.392+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 27): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:23:56.393+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:23:56.456+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:00.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:24:00.318+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:01.049+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:24:01.049+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:24:03.325+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 28): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:03.325+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:03.383+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:03.383+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:06.396+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 28): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:06.396+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:06.458+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:10.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:24:10.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:11.050+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:24:11.052+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:24:13.319+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 29): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:13.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:13.381+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:13.381+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:16.394+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 29): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:16.395+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:16.450+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:20.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:24:20.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:21.058+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:24:21.059+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:24:23.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 30): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:23.326+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:23.405+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:23.405+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:26.417+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 30): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:26.417+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:26.491+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:30.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:24:30.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:31.066+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:24:31.098+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:24:33.321+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 31): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:33.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:33.424+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:33.425+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:36.434+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 31): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:36.434+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:36.487+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:40.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:24:40.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:41.101+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:24:41.102+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:24:43.321+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 32): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:43.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:43.408+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:43.408+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:46.421+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 32): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:46.421+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:46.480+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:50.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:24:50.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:51.114+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:24:51.114+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:24:53.325+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 33): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:53.326+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:53.381+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:24:53.381+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:24:56.382+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 33): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:24:56.382+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:24:56.437+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:00.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:25:00.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:01.131+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:25:01.131+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:25:03.316+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 34): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:03.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:03.367+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:03.367+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:06.383+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 34): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:06.384+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:06.441+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:10.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:25:10.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:11.141+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:25:11.157+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:25:13.321+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 35): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:13.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:13.372+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:13.373+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:16.386+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 35): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:16.387+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:16.446+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:20.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:25:20.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:21.163+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:25:21.164+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:25:23.313+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 36): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:23.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:23.367+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:23.369+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:26.374+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 36): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:26.374+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:26.447+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:30.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:25:30.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:31.169+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:25:31.185+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:25:33.321+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 37): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:33.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:33.400+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:33.401+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:36.408+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 37): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:36.408+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:36.470+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:40.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:25:40.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:41.197+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:25:41.198+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:25:43.332+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 38): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:43.332+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:43.389+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:43.390+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:46.403+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 38): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:46.403+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:46.457+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:50.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:25:50.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:51.200+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:25:51.201+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:25:53.327+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 39): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:53.327+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:53.390+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:25:53.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:25:56.406+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 39): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:25:56.406+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:25:56.462+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:00.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:26:00.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:01.209+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:26:01.210+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:26:03.325+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 40): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:03.325+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:03.378+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:03.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:06.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 40): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:06.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:06.449+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:10.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:26:10.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:11.217+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:26:11.218+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:26:13.324+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 41): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:13.325+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:13.379+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:13.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:16.383+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 41): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:16.383+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:16.435+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:20.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:26:20.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:21.227+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:26:21.228+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:26:23.318+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 42): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:23.318+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:23.375+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:23.375+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:26.389+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 42): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:26.390+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:26.452+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:30.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:26:30.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:31.242+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:26:31.242+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:26:33.314+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 43): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:33.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:33.370+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:33.370+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:36.384+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 43): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:36.384+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:36.457+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:40.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:26:40.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:41.247+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:26:41.248+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:26:43.320+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 44): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:43.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:43.370+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:43.370+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:46.381+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 44): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:46.381+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:46.443+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:50.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:26:50.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:51.257+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:26:51.273+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:26:53.313+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 45): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:53.313+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:53.368+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:26:53.368+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:26:56.371+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 45): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:26:56.371+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:26:56.432+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:00.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:27:00.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:01.279+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:27:01.280+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:27:03.329+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 46): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:03.329+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:03.388+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:03.388+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:06.399+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 46): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:06.399+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:06.471+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:10.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:27:10.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:11.282+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:27:11.283+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:27:13.321+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 47): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:13.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:13.382+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:13.382+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:16.391+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 47): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:16.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:16.457+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:20.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:27:20.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:21.297+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:27:21.297+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:27:23.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 48): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:23.326+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:23.386+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:23.386+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:26.389+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 48): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:26.390+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:26.443+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:30.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:27:30.323+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:31.308+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:27:31.323+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:27:33.335+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 49): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:33.335+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:33.392+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:33.393+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:36.399+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 49): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:36.399+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:36.450+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:40.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:27:40.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:41.337+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:27:41.339+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:27:43.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 50): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:43.326+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:43.379+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:43.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:46.392+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 50): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:46.393+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:46.471+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:50.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:27:50.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:51.346+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:27:51.347+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:27:53.322+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 51): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:53.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:53.375+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:27:53.376+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:27:56.379+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 51): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:27:56.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:27:56.438+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:00.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:28:00.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:01.355+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:28:01.356+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:28:03.321+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 52): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:03.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:03.376+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:03.376+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:06.383+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 52): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:06.384+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:06.451+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:10.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:28:10.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:11.371+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:28:11.387+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:28:13.333+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 53): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:13.333+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:13.400+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:13.400+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:16.415+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 53): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:16.415+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:16.484+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:20.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:28:20.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:21.392+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:28:21.393+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:28:23.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 54): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:23.327+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:23.386+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:23.386+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:26.401+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 54): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:26.401+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:26.456+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:30.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:28:30.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:31.405+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:28:31.406+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:28:33.323+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 55): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:33.323+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:33.377+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:33.377+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:36.394+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 55): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:36.394+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:36.450+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:40.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:28:40.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:41.410+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:28:41.426+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:28:43.327+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 56): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:43.327+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:43.381+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:43.382+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:46.387+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 56): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:46.387+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:46.438+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:50.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:28:50.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:51.432+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:28:51.433+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:28:53.319+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 57): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:53.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:53.386+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:28:53.387+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:28:56.393+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 57): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:28:56.393+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:28:56.462+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:00.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:29:00.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:01.449+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:29:01.450+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:29:03.318+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 58): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:03.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:03.367+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:03.369+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:06.383+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 58): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:06.383+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:06.433+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:10.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:29:10.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:11.465+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:29:11.466+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:29:13.317+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 59): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:13.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:13.366+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:13.366+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:16.372+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 59): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:16.373+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:16.461+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:20.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:29:20.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:21.472+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:29:21.473+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:29:23.323+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 60): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:23.324+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:23.377+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:23.377+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:26.384+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 60): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:26.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:26.449+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:30.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:29:30.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:31.473+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:29:31.473+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:29:33.320+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 61): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:33.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:33.371+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:33.372+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:36.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 61): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:36.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:36.445+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:40.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:29:40.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:41.483+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:29:41.499+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:29:43.322+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 62): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:43.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:43.373+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:43.373+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:46.382+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 62): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:46.382+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:46.435+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:50.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:29:50.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:51.505+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:29:51.521+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:29:53.331+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 63): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:53.331+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:53.387+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:29:53.387+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:29:56.390+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 63): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:29:56.390+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:29:56.447+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:00.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:30:00.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:01.527+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:30:01.544+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:30:03.323+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 64): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:03.323+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:03.379+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:03.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:06.392+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 64): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:06.392+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:06.451+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:10.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:30:10.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:11.551+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:30:11.566+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:30:13.328+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 65): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:13.328+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:13.389+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:13.389+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:16.395+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 65): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:16.395+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:16.475+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:20.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:30:20.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:21.582+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:30:21.583+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:30:23.329+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 66): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:23.330+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:23.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:23.386+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:26.401+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 66): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:26.401+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:26.456+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:30.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:30:30.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:31.586+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:30:31.602+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:30:33.327+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 67): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:33.327+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:33.410+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:33.411+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:36.416+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 67): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:36.416+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:36.471+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:40.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:30:40.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:41.608+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:30:41.609+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:30:43.330+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 68): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:43.330+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:43.389+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:43.389+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:46.397+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 68): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:46.397+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:46.455+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:50.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:30:50.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:51.626+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:30:51.628+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:30:53.320+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 69): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:53.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:53.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:30:53.386+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:30:56.398+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 69): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:30:56.398+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:30:56.455+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:00.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:31:00.313+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:01.633+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:31:01.649+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:31:03.329+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 70): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:03.329+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:03.387+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:03.387+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:06.401+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 70): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:06.401+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:06.460+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:10.313+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:31:10.313+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:11.664+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:31:11.666+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:31:13.320+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 71): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:13.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:13.379+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:13.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:16.391+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 71): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:16.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:16.447+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:20.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:31:20.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:21.673+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:31:21.689+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:31:23.327+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 72): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:23.328+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:23.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:23.386+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:26.396+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 72): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:26.396+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:26.454+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:30.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:31:30.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:31.701+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:31:31.717+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:31:33.312+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 73): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:33.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:33.369+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:33.369+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:36.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 73): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:36.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:36.441+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:40.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:31:40.312+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:41.730+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:31:41.731+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:31:43.321+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 74): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:43.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:43.379+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:43.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:46.384+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 74): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:46.384+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:46.443+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:50.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:31:50.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:51.742+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:31:51.744+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:31:53.334+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 75): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:53.335+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:53.395+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:31:53.395+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:31:56.407+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 75): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:31:56.407+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:31:56.463+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:00.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:32:00.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:01.755+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:32:01.757+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:32:03.329+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 76): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:03.329+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:03.392+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:03.392+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:06.401+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 76): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:06.402+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:06.454+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:10.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:32:10.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:11.764+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:32:11.765+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:32:13.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 77): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:13.326+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:13.383+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:13.384+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:16.390+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 77): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:16.390+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:16.451+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:20.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:32:20.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:21.769+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:32:21.785+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:32:23.317+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 78): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:23.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:23.370+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:23.372+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:26.373+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 78): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:26.374+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:26.428+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:30.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:32:30.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:31.795+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:32:31.795+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:32:33.324+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 79): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:33.324+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:33.381+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:33.381+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:36.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 79): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:36.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:36.437+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:40.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:32:40.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:41.809+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:32:41.825+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:32:43.317+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 80): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:43.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:43.371+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:43.372+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:46.379+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 80): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:46.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:46.437+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:50.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:32:50.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:51.836+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:32:51.837+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:32:53.311+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 81): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:53.311+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:53.369+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:32:53.370+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:32:56.373+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 81): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:32:56.374+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:32:56.432+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:00.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:33:00.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:01.846+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:33:01.861+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:33:03.321+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 82): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:03.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:03.382+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:03.383+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:06.393+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 82): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:06.394+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:06.451+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:10.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:33:10.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:11.866+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:33:11.867+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:33:13.313+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 83): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:13.313+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:13.373+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:13.375+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:16.382+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 83): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:16.382+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:16.441+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:20.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:33:20.320+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:21.876+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:33:21.892+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:33:23.325+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 84): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:23.325+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:23.382+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:23.383+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:26.388+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 84): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:26.389+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:26.446+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:30.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:33:30.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:31.894+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:33:31.895+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:33:33.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 85): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:33.327+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:33.387+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:33.387+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:36.403+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 85): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:36.403+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:36.456+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:40.314+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:33:40.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:41.903+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:33:41.904+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:33:43.322+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 86): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:43.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:43.379+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:43.379+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:46.396+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 86): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:46.396+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:46.453+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:50.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:33:50.309+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:51.916+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:33:51.917+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:33:53.314+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 87): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:53.315+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:53.369+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:33:53.369+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:33:56.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 87): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:33:56.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:33:56.441+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:00.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:34:00.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:01.925+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:34:01.927+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:34:03.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 88): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:03.326+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:03.383+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:03.383+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:06.395+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 88): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:06.395+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:06.449+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:10.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:34:10.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:11.939+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:34:11.939+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:34:13.317+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 89): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:13.317+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:13.372+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:13.373+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:16.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 89): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:16.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:16.444+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:20.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:34:20.316+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:21.954+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:34:21.956+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:34:23.330+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 90): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:23.330+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:23.393+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:23.393+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:26.408+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 90): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:26.408+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:26.473+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:30.307+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:34:30.308+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:31.968+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:34:31.970+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:34:33.321+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 91): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:33.321+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:33.386+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:33.386+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:36.400+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 91): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:36.400+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:36.464+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:40.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:34:40.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:41.985+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:34:41.988+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:34:43.327+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 92): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:43.327+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:43.385+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:43.385+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:46.391+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 92): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:46.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:46.463+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:50.313+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:34:50.313+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:51.994+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:34:51.995+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:34:53.331+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 93): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:53.331+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:53.398+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:34:53.398+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:34:56.414+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 93): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:34:56.415+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:34:56.476+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:35:00.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:35:00.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:35:02.006+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:35:02.007+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:35:03.326+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 94): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:35:03.326+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:35:03.381+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:35:03.381+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:35:06.391+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 94): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:35:06.391+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:35:06.456+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:35:10.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:35:10.322+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:35:12.020+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:35:12.022+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:35:13.332+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 95): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:35:13.332+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:35:13.388+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:35:13.388+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:35:16.393+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 95): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:35:16.394+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:35:16.451+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:35:20.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:35:20.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:35:22.024+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:35:22.040+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:35:23.329+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 96): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:35:23.329+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:35:23.389+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:35:23.390+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:35:26.398+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 96): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:35:26.399+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:35:26.457+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:35:30.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.i.AODB.service.TcpClientService        : SQL Server is running
+2025-12-22T10:35:30.310+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:35:32.043+05:30  INFO 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Attempting connection to 127.0.0.1 : 9000
+2025-12-22T10:35:32.045+05:30 ERROR 38236 --- [AODB] [Thread-1] c.i.AODB.service.TcpClientService        : Failed to connect or communicate: Connection refused: getsockopt
+2025-12-22T10:35:33.319+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ❌ PLC connection failed (attempt 97): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:35:33.319+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ✅ SQL Server is running (PLC01)
+2025-12-22T10:35:33.379+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc02Service   : ⚠️ Windows Service 'CSC_SAC_Service' is UNHEALTHY or STOPPED
+2025-12-22T10:35:33.380+05:30  INFO 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : Pinging PLC 192.168.23.2:102 with timeout 3000
+2025-12-22T10:35:34.753+05:30  INFO 38236 --- [AODB] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-22T10:35:34.771+05:30  INFO 38236 --- [AODB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-22T10:35:36.384+05:30  WARN 38236 --- [AODB] [scheduling-1] c.industrial.AODB.service.Plc01Service   : ❌ PLC connection failed (attempt 97): 192.168.23.2:102 - Connect timed out
+2025-12-22T10:35:36.391+05:30  INFO 38236 --- [AODB] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-22T10:35:36.393+05:30  INFO 38236 --- [AODB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-22T10:35:36.402+05:30  INFO 38236 --- [AODB] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

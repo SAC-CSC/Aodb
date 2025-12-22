@@ -1,0 +1,635 @@
+<style>
+    /* Dashboard Background */
+    .dashboard-container {
+        background: linear-gradient(to right, #eef2f3, #dfe9f3);
+        min-height: calc(100vh - 140px);
+        padding: 20px;
+        margin-left: 170px; /* match sidebar width */
+        border-radius: 8px;
+        max-width: 1200px; /* keep consistent width on big screens */
+    }
+
+    /* Section Titles */
+    .section-title {
+        border-left: 4px solid #004080;
+        padding-left: 12px;
+        margin: 16px 0 14px 0;
+        color: #004080;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    /* Card */
+    .card {
+        border-radius: 12px;
+        background-color: #ffffff !important;
+        color: #333 !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        border: none;
+    }
+    .card-header {
+        background: linear-gradient(to right, #004080, #0066cc);
+        color: #fff !important;
+        font-weight: 700;
+        font-size: 0.95rem;
+        padding: 8px 12px;
+        letter-spacing: .5px;
+    }
+    /* Reduce space between form rows */
+    .card-body .row > div {
+        margin-bottom: 0.5rem; /* tighter spacing */
+    }
+
+    /* Keep buttons aligned nicely */
+    .card-body .btn {
+        min-width: 120px;
+    }
+
+
+    /* Form Inputs */
+    .form-control {
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #333;
+        font-size: 0.85rem;
+        padding: 0.35rem 0.5rem;
+        transition: all .2s ease-in-out;
+    }
+    .form-control:focus {
+        border-color: #004080;
+        box-shadow: 0 0 0 0.2rem rgba(0,64,128,.15);
+    }
+
+    /* Table Wrapper with Scroll */
+    .table-wrapper {
+        max-height: 432px; /* vertical scroll */
+        overflow-y: auto;
+        overflow-x: auto; /* horizontal scroll if needed */
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        border: 1px solid #dee2e6;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Scrollbar style */
+    .table-wrapper::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    .table-wrapper::-webkit-scrollbar-thumb {
+        background: #004080;
+        border-radius: 6px;
+    }
+
+    /* Table */
+    .table {
+        min-width: 1000px;  /* keep wide so scroll can appear */
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+        margin-bottom: 0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .table thead {
+        background: #004080;
+        color: #fff;
+        font-weight: 600;
+    }
+    .table thead th {
+        font-size: 0.9rem;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .table th, .table td {
+        padding: 0.5rem;
+        text-align: center;
+        border: 1px solid #e0e0e0;
+        vertical-align: middle;
+    }
+    .table tbody tr {
+        transition: background-color 0.2s ease-in-out;
+    }
+    .table tbody tr:hover {
+        background-color: rgba(0, 64, 128, 0.08) !important;
+        cursor: pointer;
+    }
+    .selected-row {
+        background-color: rgba(25, 135, 84, 0.2) !important;
+    }
+
+    /* Inline editing input */
+    .form-control-table {
+        width: 100%;
+        padding: 0.25rem 0.4rem;
+        font-size: 0.85rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        height: 32px; /* same as buttons */
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* Buttons */
+    .btn {
+        font-weight: 600;
+        font-size: 0.8rem;
+        border-radius: 6px;
+        transition: all 0.2s ease-in-out;
+        padding: .35rem 1rem;
+    }
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .btn-success { background-color: #198754; border: none; color: #fff; }
+    .btn-danger { background-color: #dc3545; border: none; color: #fff; }
+    .btn-primary { background-color: #004080; border: none; color: #fff; }
+    .btn-secondary { background-color: #6c757d; border: none; color: #fff; }
+    .btn-info { background-color: #0dcaf0; border: none; color: #fff; }
+    .btn-outline-primary { color: #004080; border: 1px solid #004080; }
+    .btn-outline-primary:hover { background: #004080; color: #fff; }
+    .btn-sm {
+        font-size: 0.8rem;
+        height: 32px;
+        padding: 0 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Keep Edit/Delete/Save/Cancel aligned */
+    td .d-flex {
+        gap: 0.4rem;
+    }
+
+    /* Editing row subtle highlight */
+    .editing-row {
+        background-color: #f8fbff !important;
+    }
+
+    /* Row animations */
+    .table tbody tr.ng-enter {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    .table tbody tr.ng-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.4s ease;
+    }
+    .table tbody tr.ng-leave {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .table tbody tr.ng-leave-active {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+        width: 240px;
+        background-color: #004080;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        box-shadow: 2px 0 6px rgba(0,0,0,0.15);
+        z-index: 1050;
+    }
+    .sidebar .logo { text-align: center; margin-bottom: 1rem; }
+    .sidebar .logo img { max-height: 50px; }
+
+    .sidebar a.nav-link {
+        color: #fff;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+        border-radius: 6px;
+        margin: 2px 8px;
+    }
+    .sidebar a.nav-link:hover { background-color: #0066cc; transform: translateX(3px); }
+    .sidebar a.nav-link.active { background-color: #198754; }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .sidebar {
+            position: relative;
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 0.5rem 0;
+        }
+        .dashboard-container { margin-left: 0; margin-top: 10px; }
+    }
+
+</style>
+
+
+
+<!-- Dashboard -->
+<div class="container-fluid dashboard-container" ng-controller="MainController">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="/images/whiteLogo.png" alt="Logo">
+        </div>
+        <a class="nav-link" ng-class="{active: activePage=='home'}" ng-click="activePage='home'" href="#">
+            <i class="bi bi-house-door"></i> Home
+        </a>
+        <a class="nav-link" ng-class="{active: activePage=='sort'}" ng-click="activePage='sort'">
+            <i class="bi bi-cpu"></i> Sort Position
+        </a>
+        <a class="nav-link" ng-class="{active: activePage=='flight'}" ng-click="activePage='flight'">
+            <i class="bi bi-file-earmark-bar-graph"></i> Flight Allocation
+        </a>
+        <a class="nav-link" ng-class="{active: activePage=='airline'}" ng-click="activePage='airline'">
+            <i class="bi bi-shield-lock"></i>Airline(BTIC)
+        </a>
+    </div>
+    <!-- Flight Page -->
+    <div ng-show="activePage=='flight'" ng-controller="FlightController">
+
+        <!-- Popup Message -->
+        <div class="alert position-fixed top-0 end-0 m-3 p-2"
+             ng-show="statusMessage"
+             ng-class="{
+             'alert-success': statusType=='success',
+             'alert-danger': statusType=='error',
+             'alert-warning': statusType=='warning'
+         }"
+             style="z-index:1050; min-width:250px; max-width:350px; border-radius:0.5rem; transition: all 0.3s;">
+            {{ statusMessage }}
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">Manage Flight Information</div>
+            <div class="card-body">
+                <form ng-submit="saveFlight()" class="row">
+                    <div class="col-sm-6 col-lg-4 mb-2" ng-repeat="field in flightFields">
+                        <label class="form-label small fw-semibold">{{ field.label }}</label>
+                        <input ng-if="field.type !== 'date'"
+                               type="{{ field.type }}"
+                               class="form-control"
+                               ng-model="flight[field.model]"
+                               ng-required="field.required"
+                               placeholder="{{ field.label }}" />
+                        <input ng-if="field.type === 'date'"
+                               type="date"
+                               class="form-control"
+                               ng-model="flight[field.model]"
+                               ng-required="field.required" />
+                    </div>
+                    <div class="col-12 text-center mt-2">
+                        <button type="submit" class="btn btn-success">Save / Update</button>
+                        <button type="button" class="btn btn-secondary" ng-click="resetFlight()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Active Flights -->
+        <div>
+            <h5 class="section-title">Active Flights</h5>
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Airline</th>
+                        <th>Flight Code</th>
+                        <th>Date</th>
+                        <th>Flight Destination</th>
+                        <th>Sort Position</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-animate>
+                    <tr ng-repeat="f in flights track by $index" ng-class="{ 'editing-row': f.isEditing }">
+                        <td>{{ $index + 1 }}</td>
+                        <td>
+                            <span ng-if="!f.isEditing">{{ f.airline }}</span>
+                            <input ng-if="f.isEditing" type="text" class="form-control-table" ng-model="f.airline">
+                        </td>
+                        <td>
+                            <span ng-if="!f.isEditing">{{ f.flightNumber }}</span>
+                            <input ng-if="f.isEditing" type="text" class="form-control-table" ng-model="f.flightNumber">
+                        </td>
+                        <td>
+                            <span ng-if="!f.isEditing">{{ f.originDate | date:'yyyy-MM-dd' }}</span>
+                            <input ng-if="f.isEditing" type="date" class="form-control-table" ng-model="f.originDate">
+                        </td>
+                        <td>
+                            <span ng-if="!f.isEditing">{{ f.arrivalAirport }}</span>
+                            <input ng-if="f.isEditing" type="text" class="form-control-table" ng-model="f.arrivalAirport">
+                        </td>
+                        <td>
+                            <span ng-if="!f.isEditing">{{ f.sortPosition }}</span>
+                            <input ng-if="f.isEditing" type="text" class="form-control-table" ng-model="f.sortPosition">
+                        </td>
+                        <td>
+                            <div ng-if="!f.isEditing" class="d-flex justify-content-center gap-1">
+                                <button class="btn btn-sm btn-outline-primary"
+                                        ng-click="editFlight(f); $event.stopPropagation();">Edit</button>
+                                <button class="btn btn-sm btn-danger"
+                                        ng-click="deleteRowFlight(f); $event.stopPropagation();">Delete</button>
+                            </div>
+                            <div ng-if="f.isEditing" class="d-flex justify-content-center gap-1">
+                                <button class="btn btn-sm btn-success"
+                                        ng-click="saveRowFlight(f); $event.stopPropagation();">Save</button>
+                                <button class="btn btn-sm btn-secondary"
+                                        ng-click="cancelEdit(f); $event.stopPropagation();">Cancel</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Airline Page -->
+    <div ng-show="activePage=='airline'" ng-controller="AirlineAllocationController">
+        <!-- Popup Message -->
+        <div class="alert position-fixed top-0 end-0 m-3 p-2"
+             ng-show="statusMessage"
+             ng-class="{
+             'alert-success': statusType=='success',
+             'alert-danger': statusType=='error',
+             'alert-warning': statusType=='warning'
+         }"
+             style="z-index:1050; min-width:250px; max-width:350px; border-radius:0.5rem; transition: all 0.3s;">
+            {{ statusMessage }}
+        </div>
+        <!-- Add/Edit Form -->
+        <div class="card mb-4">
+            <div class="card-header">Manage Airline Information</div>
+            <div class="card-body">
+                <form ng-submit="saveAirline()" class="row">
+                    <div class="col-sm-6 col-lg-4 mb-2">
+                        <label class="form-label small fw-semibold">Airline Code</label>
+                        <input type="text" class="form-control" ng-model="airline.airlineCode" placeholder="Airline Code" required>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-2">
+                        <label class="form-label small fw-semibold">Airline Name</label>
+                        <input type="text" class="form-control" ng-model="airline.airlineName" placeholder="Airline Name" required>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-2">
+                        <label class="form-label small fw-semibold">Sort Position</label>
+                        <input type="number" class="form-control" ng-model="airline.sortPosition"
+                               min="1" step="1" placeholder="Enter sort position" required>
+                    </div>
+
+                    <div class="col-12 text-center mt-2">
+                        <button type="submit" class="btn btn-success">Save / Update</button>
+                        <button type="button" class="btn btn-secondary" ng-click="resetAirline()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Airline Table -->
+        <div>
+            <div class="d-flex align-items-center justify-content-between mb-2 flex-wrap">
+                <h5 class="section-title mb-0">Active Airlines</h5>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-primary btn-sm"
+                            ng-click="editAllRows()"
+                            ng-disabled="allEditing">
+                        Edit All
+                    </button>
+
+                    <button class="btn btn-success btn-sm"
+                            ng-click="saveAllRows()"
+                            ng-disabled="!allEditing || savingAll">
+                        Save All
+                    </button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Airline Code</th>
+                    <th>Airline Name</th>
+                    <th>Sort Position</th>
+                    <th>Action</th>
+                    <th>Enable/Disable</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="a in airlines track by a.recId || $index">
+
+                    <td>{{ $index + 1 }}</td>
+
+                    <!-- Airline Code -->
+                    <td>
+                        <span ng-if="!allEditing">{{ a.airlineCode }}</span>
+                        <input ng-if="allEditing"
+                               class="form-control form-control-sm"
+                               ng-model="a.airlineCode">
+                    </td>
+
+                    <!-- Airline Name -->
+                    <td>
+                        <span ng-if="!allEditing">{{ a.airlineName }}</span>
+                        <input ng-if="allEditing"
+                               class="form-control form-control-sm"
+                               ng-model="a.airlineName">
+                    </td>
+
+                    <!-- Sort Position -->
+                    <td>
+                        <span ng-if="!allEditing">{{ a.sortPosition }}</span>
+                        <input ng-if="allEditing"
+                               class="form-control form-control-sm"
+                               ng-model="a.sortPosition">
+                    </td>
+
+                    <td class="text-center" style="vertical-align: middle;">
+                        <div class="d-flex justify-content-center w-100">
+                            <button class="btn btn-sm btn-danger"
+                                    ng-disabled="!allEditing"
+                                    ng-click="deleteAirline(a)">
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+
+                    <!-- Enable/Disable (Always allowed) -->
+                    <td class="text-center">
+                        <select class="form-select form-select-sm w-auto d-inline-block"
+                                ng-model="a.enableStatus"
+                                ng-change="toggleAirlineStatus(a)"
+                                ng-disabled="!allEditing">  <!-- Restrict editing -->
+                            <option ng-value="true">Enabled</option>
+                            <option ng-value="false">Disabled</option>
+                        </select>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+
+
+<!-- Sort Position Page -->
+<div ng-show="activePage=='sort'" ng-controller="SortPositionController">
+
+    <!-- Popup Message -->
+    <div class="alert position-fixed top-0 end-0 m-3 p-2"
+         ng-show="statusMessage"
+         ng-class="{
+             'alert-success': statusType=='success',
+             'alert-danger': statusType=='error',
+             'alert-warning': statusType=='warning'
+         }"
+         style="z-index:1050; min-width:250px; max-width:350px; border-radius:0.5rem; transition: all 0.3s;">
+        {{ statusMessage }}
+    </div>
+
+    <!-- Manage Sort Position Form -->
+    <div class="card mb-4">
+        <div class="card-header">Manage Sort Position</div>
+        <div class="card-body">
+            <form ng-submit="saveSort()" class="row">
+
+                <div class="col-sm-6 col-lg-4 mb-2">
+                    <label class="form-label small fw-semibold">Sort Position</label>
+                    <input type="text" class="form-control"
+                           ng-model="sort.sortPosition"
+                           required placeholder="Sort Position">
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-2">
+                    <label class="form-label small fw-semibold">Sort Value</label>
+                    <input type="number" class="form-control"
+                           ng-model="sort.sortValue"
+                           required placeholder="Sort Value">
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-2">
+                    <label class="form-label small fw-semibold">Type</label>
+                    <input type="text" class="form-control"
+                           ng-model="sort.type"
+                           required placeholder="Type">
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-2">
+                    <label class="form-label small fw-semibold">Operator Name</label>
+                    <input type="text" class="form-control"
+                           ng-model="sort.operatorName"
+                           placeholder="Operator Name">
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-2">
+                    <label class="form-label small fw-semibold">Origin Date</label>
+                    <input type="date" class="form-control"
+                           ng-model="sort.originDate"
+                           required>
+                </div>
+
+                <div class="col-12 text-center mt-2">
+                    <button type="submit" class="btn btn-success">Save / Update</button>
+                    <button type="button" class="btn btn-secondary" ng-click="resetSort()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Active Sort Positions -->
+    <div>
+        <h5 class="section-title">Active Sort Positions</h5>
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Sort Position</th>
+                    <th>Sort Value</th>
+                    <th>Type</th>
+                    <th>Operator</th>
+                    <th>Origin Date</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="p in positions track by $index"
+                    ng-class="{ 'editing-row': p.isEditing }">
+
+                    <td>{{ $index + 1 }}</td>
+
+                    <td>
+                        <span ng-if="!p.isEditing">{{ p.sortPosition }}</span>
+                        <input ng-if="p.isEditing" type="text" class="form-control-table"
+                               ng-model="p.sortPosition">
+                    </td>
+
+                    <td>
+                        <span ng-if="!p.isEditing">{{ p.sortValue }}</span>
+                        <input ng-if="p.isEditing" type="number" class="form-control-table"
+                               ng-model="p.sortValue">
+                    </td>
+
+                    <td>
+                        <span ng-if="!p.isEditing">{{ p.type }}</span>
+                        <input ng-if="p.isEditing" type="text" class="form-control-table"
+                               ng-model="p.type">
+                    </td>
+
+                    <td>
+                        <span ng-if="!p.isEditing">{{ p.operatorName }}</span>
+                        <input ng-if="p.isEditing" type="text" class="form-control-table"
+                               ng-model="p.operatorName">
+                    </td>
+
+                    <td>
+                        <span ng-if="!p.isEditing">{{ p.originDate | date:'yyyy-MM-dd' }}</span>
+                        <input ng-if="p.isEditing" type="date" class="form-control-table"
+                               ng-model="p.originDate">
+                    </td>
+
+                    <td>
+                        <div ng-if="!p.isEditing" class="d-flex justify-content-center gap-1">
+                            <button class="btn btn-sm btn-outline-primary"
+                                    ng-click="editSort(p); $event.stopPropagation();">Edit</button>
+                            <button class="btn btn-sm btn-danger"
+                                    ng-click="deleteSortRow(p); $event.stopPropagation();">Delete</button>
+                        </div>
+
+                        <div ng-if="p.isEditing" class="d-flex justify-content-center gap-1">
+                            <button class="btn btn-sm btn-success"
+                                    ng-click="saveSortRow(p); $event.stopPropagation();">Save</button>
+                            <button class="btn btn-sm btn-secondary"
+                                    ng-click="cancelEdit(p); $event.stopPropagation();">Cancel</button>
+                        </div>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</div>

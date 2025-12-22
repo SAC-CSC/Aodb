@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beumer Group</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="css/all.min.css"/>
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #00303E;
+        }
+
+        #logoPage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #00303E;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        #loginPage {
+            display: none;
+            height: 100vh;
+            opacity: 0;
+            background-color: #00303E;
+        }
+
+        .bg-logo, .bg-about-logo {
+            max-width: 150px;
+        }
+
+        .login-container {
+            margin: 5% auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .form-buttons span {
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border-radius: 25px;
+            padding: 10px;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+        .language-switcher {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        @media (max-width: 576px) {
+            .bg-logo, .bg-about-logo {
+                max-width: 100px;
+            }
+
+            .login-container {
+                width: 90%;
+            }
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-color: #00303E; }
+            100% { background-color: #00303E; }
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: moveAndShrink 1.5s forwards 2.5s;
+        }
+
+        @keyframes moveAndShrink {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translate(-92%, -205%) scale(0.3); }
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            animation: rotate 1s forwards 1.5s;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .circle img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .large-arrow {
+            width: 30px;
+            height: auto;
+            position: relative;
+            margin-left: -65px;
+            opacity: 0;
+            animation: cut 1s ease forwards 1.5s;
+        }
+
+        @keyframes cut {
+            0% { transform: translateY(-150%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .static-logo {
+            width: 700px;
+            height: auto;
+            margin-left: 40px;
+        }
+
+        .static-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .bg-about-logo {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+<div id="logoPage">
+    <div class="logo-container">
+        <div class="circle">
+            <object data="/images/splash_circle.svg" type="image/svg+xml">
+                <img src="/images/splash_circle.svg" alt="Circle SVG" />
+            </object>
+        </div>
+        <div class="large-arrow">
+            <object data="/images/splash_arrow.svg" type="image/svg+xml">
+                <img src="/images/splash_arrow.svg" alt="arrow SVG" />
+            </object>
+        </div>
+        <div class="static-logo">
+            <object data="/images/splash_logotype.svg" type="image/svg+xml">
+                <img src="/images/splash_logotype.svg" alt="logo SVG" />
+            </object>
+        </div>
+    </div>
+</div>
+
+<div id="loginPage">
+    <header class="d-flex justify-content-between align-items-center p-2">
+        <img src="/images/whitelogo.png" alt="Beumergroup logo" class="bg-logo" />
+        <div class="text-light">
+            <div class="fs-4" id="server-time">15:22:50</div>
+            <div class="fs-6" id="server-date">8 October 2024</div>
+        </div>
+        <script>
+            function updateDateTime() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                const dateString = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' });
+                document.getElementById('server-time').textContent = timeString;
+                document.getElementById('server-date').textContent = dateString;
+            }
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        </script>
+    </header>
+
+    <div class="container d-flex align-items-center justify-content-center vh-100">
+        <div class="login-container">
+            <div class="text-center mb-3">
+                <img src="/images/beumerlogo.png" alt="(Beumer) logo" class="bg-about-logo" />
+            </div>
+
+            <form id="loginForm" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required />
+                        <span class="input-group-text">
+                <i class="fa-solid fa-times" onclick="document.getElementById('username').value=''"></i>
+              </span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
+                        <span class="input-group-text" onclick="togglePasswordVisibility();">
+                <i class="fa-solid fa-eye" id="password-eye"></i>
+              </span>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-custom w-100">Login</button>
+                    <span class="change-password-text responsive" onclick="alert('Change password functionality to be implemented.');">Change password</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="language-switcher">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://flagcdn.com/gb.svg" style="width: 20px;"> English (UK)
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/de.svg" style="width: 20px;"> Deutsch</a></li>
+                <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/ru.svg" style="width: 20px;"> Русский</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('password');
+        const passwordEyeIcon = document.getElementById('password-eye');
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        passwordEyeIcon.classList.toggle('fa-eye');
+        passwordEyeIcon.classList.toggle('fa-eye-slash');
+    }
+
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#logoPage').fadeOut('slow', function () {
+                $('#loginPage').css('opacity', '1').fadeIn('slow');
+            });
+        }, 3000);
+    });
+
+    function updateDateTime() {
+        const now = new Date();
+        document.getElementById('server-time').textContent = now.toLocaleTimeString();
+        document.getElementById('server-date').textContent = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' });
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        if (username === "admin" && password === "password") {
+           // alert("Login successful!");
+            window.location.href = "/startimage1.html";
+        } else {
+            alert("Invalid username or password.");
+        }
+    });
+</script>
+</body>
+
+</html>

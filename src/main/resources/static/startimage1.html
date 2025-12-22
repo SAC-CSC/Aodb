@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="industrialDashboard">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AODB Industrial Dashboard</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/angular-route.min.js"></script>
+  <link href="/css/bootstrap-icons1.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background: linear-gradient(to right, #eef2f3, #8e9eab);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      background-color: #004080;
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+    .dashboard-card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      padding: 2rem;
+      background-color: #ffffff;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .dashboard-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      color: #004080;
+    }
+    .dashboard-icon {
+      font-size: 3rem;
+      color: #004080;
+    }
+    .dashboard-icons {
+      width: 3.5rem;
+      height: 3.5rem;
+      color: #004080;
+      margin-bottom: 0.5rem;
+      margin-top: 0.8rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+      background-color: #004080;
+      color: white;
+    }
+    alert {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    alert ng-show {
+      opacity: 1;
+    }
+
+
+  </style>
+</head>
+<body ng-controller="DashboardController">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Left Menu -->
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <img src="/images/whiteLogo.png" alt="(Beumer) logo" class="me-2" style="max-height: 40px;">
+      </ul>
+    </div>
+    <!-- Centered Brand (Logo + Text) -->
+    <a class="navbar-brand mx-auto d-flex align-items-center fw-bold" href="#">
+      <img src="/images/Adani_log0.png"
+           alt="Mangaluru Airport Logo"
+           class="img-fluid me-2" style="max-height: 50px;">
+    </a>
+
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav fw-bold fs-5 text-uppercase">
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="/index.html">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">Logs</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="container">
+  <!-- Dashboard Cards (HIDDEN when on /dashboard) -->
+  <div ng-if="isHomePage()">
+  <h2 class="text-center mb-4 fw-bold text-dark mt-5">Mangalore International Airport</h2>
+
+  <!-- Row 1 -->
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <a href="scada.html" class="text-decoration-none">
+        <div class="dashboard-card text-center">
+<!--          <i class="bi bi-cpu dashboard-icon"></i>-->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cpu dashboard-icons" viewBox="0 0 16 16" >
+            <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0m-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/>
+          </svg>
+          <div class="dashboard-title">SCADA</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="report.html" class="text-decoration-none">
+        <div class="dashboard-card text-center">
+<!--          <i class="bi bi-file-earmark-bar-graph dashboard-icon"></i>-->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-bar-graph dashboard-icons" viewBox="0 0 16 16">
+            <path d="M10 13.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5z"/>
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+          </svg>
+          <div class="dashboard-title">REPORT</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="#!/SAC" class="text-decoration-none">
+        <div class="dashboard-card text-center">
+<!--          <i class="bi bi-shield-lock dashboard-icon"></i>-->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-lock dashboard-icons" viewBox="0 0 16 16">
+            <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+            <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415"/>
+          </svg>
+          <div class="dashboard-title">SAC</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="row mt-2">
+    <div class="col-md-4">
+      <a href="#!/dashBoard" class="text-decoration-none">
+        <div class="dashboard-card text-center">
+<!--          <i class="bi bi-diagram-3 dashboard-icon"></i>-->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diagram-3 dashboard-icons" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+          </svg>
+          <div class="dashboard-title">SYSTEM DESCRIPTION</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="#!/AODB" class="text-decoration-none">
+        <div class="dashboard-card text-center">
+<!--          <i class="bi bi-person-plus dashboard-icon"></i>-->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus dashboard-icons" viewBox="0 0 16 16">
+            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+            <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+          </svg>
+          <div class="dashboard-title">USER ADD</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="#!/AODB" class="text-decoration-none">
+        <div class="dashboard-card text-center">
+<!--          <i class="bi bi-person-plus dashboard-icon"></i>-->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane-engines-fill dashboard-icons" viewBox="0 0 16 16">
+            <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.35 4.35 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0"/>
+          </svg>
+          <div class="dashboard-title">HARDWARE</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+  </div>
+  <div ng-view></div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 AODB Communication | Powered by AngularJS & Spring Boot
+</footer>
+<script>
+  var app = angular.module("industrialDashboard", ["ngRoute"]);
+  //************************************* this controller used for the navigate to the other pages...*************************
+  app.config(function($routeProvider) {
+    $routeProvider
+            .when("/scada", { templateUrl: "scada.html" })
+            .when("/report", { templateUrl: "report.html" })
+            .when("/SAC", { templateUrl: "SAC.html" })
+            .when("/dashBoard", { templateUrl: "dashBoard.html" })
+            .when("/AODB", { templateUrl: "AODB.html" })
+            .when("/MDS", { templateUrl: "MDS.html" })
+            .when("/dashBoard", { templateUrl: "dashBoard.html" })
+            .when("/PLC01", { templateUrl: "PLC01.html" })
+            .when("/PLC02", { templateUrl: "PLC02.html" })
+            .otherwise({ redirectTo: "/" });
+  });
+
+
+  app.controller("DashboardController", function($scope, $location) {
+    $scope.isHomePage = function() {
+      return $location.path() === "/";
+    };
+  });
+  //************************************* this controller used for the AODB Main Page...*************************
+  app.controller('AODBController', ['$scope', '$http', function($scope, $http) {
+    function fetchStatus() {
+      $http.get('/api/dashboard/status').then(function(response) {
+        const data = response.data;
+        $scope.ipAddress = data.ipAddress;
+        $scope.port = data.port;
+        $scope.readTimeout = data.readTimeout;
+        $scope.arraySize = data.arraySize;
+        $scope.socketExceptionThreshold = data.socketExceptionThreshold;
+        $scope.isOnline = data.isOnline;
+        $scope.systemMessage = data.systemMessage;
+        $scope.timestamp = new Date().toLocaleString();
+      }, function(error) {
+        console.error('Error fetching status:', error);
+      });
+    }
+
+    fetchStatus();
+    setInterval(fetchStatus, 5000); // refresh every 5s
+  }]);
+  //************************************* this controller used for the PLC-01 Status Page...*************************
+  app.controller("PLC01Controller", function($scope, $http, $interval) {
+    const API_URL = "/api/status/plc01"; // Example REST API endpoint
+
+    function loadStatus() {
+      $http.get(API_URL).then(function(response) {
+        const data = response.data;
+        $scope.ipAddress = data.ipAddress;
+        $scope.port = data.port;
+        $scope.readTimeout = data.readTimeout;
+        $scope.arraySize = data.arraySize;
+        $scope.systemMessage = data.systemMessage;
+        $scope.timestamp = data.timestamp;
+        $scope.isOnline = data.plcReachable;
+        $scope.serviceRunning = data.serviceRunning; // ← add this line
+      });
+    }
+
+    loadStatus();
+    $interval(loadStatus, 5000); // auto-refresh every 5s
+  });
+  //************************************* this controller used for the PLC-02 Status Page...*************************
+  app.controller("PLC02Controller", function($scope, $http, $interval) {
+    const API_URL = "/api/status/plc02"; // Example REST API endpoint
+
+    function loadStatus() {
+      $http.get(API_URL).then(function(response) {
+        const data = response.data;
+        $scope.ipAddress = data.ipAddress;
+        $scope.port = data.port;
+        $scope.readTimeout = data.readTimeout;
+        $scope.arraySize = data.arraySize;
+        $scope.systemMessage = data.systemMessage;
+        $scope.timestamp = data.timestamp;
+        $scope.isOnline = data.plcReachable;
+        $scope.serviceRunning = data.serviceRunning; // ← add this line
+      });
+    }
+
+    loadStatus();
+    $interval(loadStatus, 5000); // auto-refresh every 5s
+  });
+  //************************************* this is the main controller to handel all the allocation commands...*************************
+  app.controller("MainController", function($scope) {
+    $scope.activePage = "flight"; // default page
+  });
+
+  //************************************* this controller used for the Airline allocation commands...*************************
+  app.controller("AirlineAllocationController", function($scope, $http) {
+    const API_BASE = "/api/airlines";
+
+    // Reset form
+    $scope.resetAirline = function () {
+      $scope.airline = {};
+      $scope.selectedAirline = null;
+    };
+    $scope.resetAirline();
+
+    $scope.airlines = [];
+    $scope.statusMessage = "";
+    $scope.statusType = "success";
+    $scope.allEditing = false; // Edit All flag
+
+    // Show alert message
+    $scope.showMessage = function (msg, type = "success", duration = 3000) {
+      $scope.statusMessage = msg;
+      $scope.statusType = type;
+
+      setTimeout(() => {
+        $scope.$apply(() => ($scope.statusMessage = ""));
+      }, duration);
+    };
+
+    // Load active airlines including isEnabled from database
+    $scope.loadActiveAirlines = function () {
+      $http.get(API_BASE + "/active").then(
+              function (response) {
+                $scope.airlines = response.data;
+
+                // Convert DB true/false to string for dropdown and lock editing by default
+                $scope.airlines.forEach(a => {
+                  a.isEnabled = a.isEnabled ? "true" : "false";
+                  a.isEditing = false; // lock row by default
+                });
+              },
+              function (error) {
+                console.error("Error loading airlines", error);
+                $scope.showMessage("⚠️ Could not load airlines", "warning");
+              }
+      );
+    };
+    $scope.loadActiveAirlines();
+
+    // Save/Add airline from form
+    $scope.saveAirline = function () {
+      // Prepare payload with only the three required fields
+      const payload = {
+        airlineCode: $scope.airline.airlineCode,
+        airlineName: $scope.airline.airlineName,
+        sortPosition: $scope.airline.sortPosition ? parseInt($scope.airline.sortPosition) : 0,
+        operation: 'DEFAULT',
+        originDate: new Date().toISOString().split('T')[0], // YYYY-MM-DD
+        deleted: false
+      };
+
+
+      let apiCall = $scope.airline.recId
+              ? $http.put(`${API_BASE}/${$scope.airline.recId}`, payload)  // Update existing
+              : $http.post(API_BASE, payload);                              // Create new
+
+      apiCall.then(
+              function (response) {
+                $scope.showMessage("✅ Airline saved!", "success");
+                $scope.resetAirline();
+                $scope.loadActiveAirlines();
+              },
+              function (error) {
+                console.error("❌ Error saving airline:", error);
+                let msg = error.data?.message || "❌ Error saving airline";
+                $scope.showMessage(msg, "error");
+              }
+      );
+    };
+
+    // Edit single row
+    $scope.editAirline = function (a) {
+      a.isEditing = true; // enable editing for the row
+    };
+
+    // Cancel row edit
+    $scope.cancelEditAirline = function (a) {
+      a.isEditing = false; // lock row again
+      $scope.loadActiveAirlines(); // reload original values
+    };
+
+    // Save single row
+    $scope.saveAirlineRow = function (a) {
+      a.isEnabled = a.isEnabled === "true"; // convert string to boolean
+
+      let apiCall = $http.put(`${API_BASE}/${a.recId}`, a);
+
+      apiCall.then(
+              function (response) {
+                a.isEditing = false; // lock row after saving
+                $scope.showMessage("✅ Airline updated!", "success");
+                $scope.loadActiveAirlines();
+              },
+              function (error) {
+                console.error("❌ Error saving airline:", error);
+                let msg = error.data?.message || "❌ Error saving airline";
+                $scope.showMessage(msg, "error");
+              }
+      );
+    };
+
+    // Delete airline
+    $scope.deleteAirline = function (a) {
+      if (!a.recId) return;
+
+      // Allow delete only when Edit-All mode is ON
+      if (!$scope.allEditing) {
+        $scope.showMessage("Please enable Edit Mode to delete entries.", "warning");
+        return;
+      }
+
+      if (!confirm(`Are you sure you want to delete airline ${a.airlineName}?`)) return;
+
+      $http.put(`${API_BASE}/${a.recId}/delete`).then(
+              function () {
+                $scope.showMessage(`🗑️ Airline ${a.airlineName} deleted!`, "success");
+                $scope.loadActiveAirlines();
+              },
+              function (error) {
+                console.error("❌ Error deleting airline:", error);
+                $scope.showMessage("❌ Error deleting airline", "error");
+              }
+      );
+    };
+
+    // -------------------------------
+    // Edit All & Save All
+    // -------------------------------
+    $scope.editAllRows = function () {
+      $scope.allEditing = true;
+      $scope.airlines.forEach(a => a.isEditing = true);
+    };
+
+    $scope.saveAllRows = function () {
+      // Convert dropdown strings to booleans
+      let finalList = $scope.airlines.map(a => {
+        return {
+          ...a,
+          isEnabled: a.isEnabled === "true"
+        };
+      });
+
+      $http.post(`${API_BASE}/saveAll`, finalList).then(
+              function (response) {
+                $scope.showMessage("✅ All airlines saved!", "success");
+                $scope.allEditing = false;
+                $scope.airlines.forEach(a => a.isEditing = false); // lock rows again
+                $scope.loadActiveAirlines();
+              },
+              function (error) {
+                console.error("❌ Error saving all airlines:", error);
+                let msg = error.data?.message || "❌ Error saving all airlines";
+                $scope.showMessage(msg, "error");
+              }
+      );
+    };
+
+    // Toggle Enable/Disable (updates backend instantly)
+    $scope.toggleAirlineStatus = function (a) {
+      let payload = {
+        recId: a.recId,
+        isEnabled: a.isEnabled === "true"
+      };
+
+      $http.put(`${API_BASE}/${a.recId}/status`, payload).then(
+              function () {
+                $scope.showMessage(`✈️ Status updated: ${a.airlineName}`, "success");
+              },
+              function (error) {
+                console.error("Error updating status", error);
+                $scope.showMessage("⚠️ Error updating status", "warning");
+              }
+      );
+    };
+  });
+
+  //************************************* this controller used for the flight allocation commands...*************************
+
+  app.controller("FlightController", function($scope, $http) {
+    const API_BASE = "/api/flights";
+
+    // Initialize flight object
+    $scope.resetFlight = function() {
+      console.log("🔄 Resetting flight form");
+      $scope.flight = { originDate: new Date() };
+      $scope.selectedFlight = null;
+    };
+    $scope.resetFlight();
+
+    $scope.flights = [];
+    $scope.selectedFlight = null;
+    $scope.statusMessage = "";
+    $scope.statusType = "success"; // success, error, warning
+
+    $scope.flightFields = [
+      { label: "Airline", model: "airline", type: "text", required: true },
+      { label: "Flight Code", model: "flightNumber", type: "text", required: true },
+      { label: "Date", model: "originDate", type: "date", required: true },
+      { label: "Flight Destination", model: "arrivalAirport", type: "text" },
+      { label: "Sort Position", model: "sortPosition", type: "text" }
+    ];
+
+    $scope.showMessage = function(msg, type = "success", duration = 3000) {
+      $scope.statusMessage = msg;
+      $scope.statusType = type;
+
+      // Auto-hide popup after duration
+      setTimeout(() => {
+        $scope.$apply(() => $scope.statusMessage = "");
+      }, duration);
+
+      // Also log in console if needed
+      if (type === "error") console.error(msg);
+      else if (type === "warning") console.warn(msg);
+      else console.log(msg);
+    };
+
+
+    // Save or create flight
+    $scope.saveFlight = function() {
+      console.log("📤 Saving flight:", $scope.flight);
+      // Convert Date → string before sending
+      if ($scope.flight.originDate instanceof Date) {
+        $scope.flight.originDate = $scope.flight.originDate.toISOString().split("T")[0];
+      }
+      $http.post(API_BASE, $scope.flight)
+              .then(function() {
+                $scope.showMessage("✅ Flight saved successfully!", "success");
+                $scope.resetFlight();
+                $scope.loadActiveFlights();
+              }, function(error) {
+                console.error("❌ Error saving flight:", error);
+                $scope.showMessage("❌ Error saving flight.", "error");
+              });
+    };
+
+    $scope.loadFlight = function(f) {
+      console.log("✏️ Loading flight for editing:", f);
+      $scope.flight = angular.copy(f);
+
+      // Fix Date
+      if ($scope.flight.originDate) {
+        $scope.flight.originDate = new Date($scope.flight.originDate);
+      }
+
+      // Fix Flight Destination
+      $scope.flight.arrivalAirport = $scope.flight.arrivalAirport || "";
+
+      $scope.showMessage("✏️ Flight loaded for editing.", "success");
+    };
+
+
+    $scope.selectFlight = function(f) {
+      console.log("🔘 Flight selected:", f);
+      $scope.selectedFlight = f;
+      $scope.loadFlight(f);
+    };
+
+    // Load all active flights
+    $scope.loadActiveFlights = function() {
+      console.log("📥 Loading active flights...");
+      $http.get(API_BASE + "/active")
+              .then(function(response) {
+                console.log("✅ Loaded active flights:", response.data);
+
+                // Fix date fields for AngularJS <input type="date">
+                $scope.flights = response.data.map(f => {
+                  if (f.originDate) {
+                    f.originDate = new Date(f.originDate); // convert string → Date
+                  }
+                  return f;
+                });
+
+              }, function(error) {
+                console.error("⚠️ Error loading flights:", error);
+                $scope.showMessage("⚠️ Could not load active flights.", "warning");
+              });
+    };
+
+    $scope.loadActiveFlights();
+
+    // Enable row edit
+    $scope.editFlight = function(f) {
+
+      console.log("🖊️ Edit mode enabled for:", f);
+      $scope.flights.forEach(row => row.isEditing = false);
+      f.backup = angular.copy(f);
+      f.isEditing = true;
+    };
+
+
+    // Save or update a single row flight
+    $scope.saveRowFlight = function(f) {
+      console.log("💾 Saving row flight:", f);
+
+      // Ensure originDate is a proper string for backend
+      if (f.originDate instanceof Date) {
+        f.originDate = f.originDate.toISOString().split("T")[0]; // yyyy-MM-dd
+      } else if (typeof f.originDate === 'string') {
+        // Convert string back to yyyy-MM-dd if needed
+        f.originDate = new Date(f.originDate).toISOString().split("T")[0];
+      }
+
+      // Determine API method: POST for create, PUT for update
+      let apiCall;
+      if (f.recId) {
+        // Update existing flight
+        apiCall = $http.put(`${API_BASE}/${f.recId}`, f);
+      } else {
+        // New flight
+        apiCall = $http.post(API_BASE, f);
+      }
+
+      apiCall.then(function(response) {
+        f.isEditing = false;
+        delete f.backup;
+
+        $scope.showMessage(`✅ Flight ${f.flightNumber} saved successfully!`, "success");
+
+        // Reload flights from backend
+        $scope.loadActiveFlights();
+
+      }).catch(function(error) {
+        console.error("❌ Error saving row flight:", error);
+
+        let msg = error.data && error.data.message ? error.data.message : "Unknown error";
+        $scope.showMessage(`❌ ${msg} Flight ${f.flightNumber}`, "error");
+
+        // Restore backup on error
+        if (f.backup) angular.extend(f, f.backup);
+      });
+    };
+
+    // Cancel row edit
+    $scope.cancelEdit = function(f) {
+      console.log("❌ Cancel edit for:", f);
+      angular.extend(f, f.backup);
+      f.isEditing = false;
+      delete f.backup;
+    };
+
+    // this scope is used to delete the records...
+    $scope.deleteRowFlight = function(f) {
+      console.log("🗑️ Deleting flight row:", f);
+      if (!f.recId) {
+        $scope.showMessage("⚠️ Flight has no recID.", "warning");
+        return;
+      }
+
+      // Correct API URL
+      $http.put(`${API_BASE}/${f.recId}/delete`, f)
+              .then(function(response) {
+                // Success from backend
+                const idx = $scope.flights.indexOf(f);
+                if (idx !== -1) $scope.flights.splice(idx, 1);
+                const msg = response.data && response.data.message ? response.data.message : "Deleted";
+                $scope.showMessage(`🗑️ ${msg} Flight ${f.flightNumber}!`, "success");
+              }, function(error) {
+                // Error from backend
+                const msg = error.data && error.data.message ? error.data.message : "Unknown error";
+                console.error("❌ Error deleting flight:", error);
+                $scope.showMessage(`❌ ${msg}`, "error");
+              });
+    };
+
+  });
+
+  //************************************* Sort Position Controller...*************************
+  app.controller("SortPositionController", function($scope, $http) {
+
+      const API_BASE = "/api/sortpositions";
+
+      $scope.resetSort = function() {
+          console.log("🔄 Resetting sort position form");
+          $scope.sort = { originDate: new Date() };
+          $scope.selectedSort = null;
+      };
+      $scope.resetSort();
+
+      $scope.sorts = [];
+      $scope.selectedSort = null;
+
+      $scope.statusMessage = "";
+      $scope.statusType = "success";
+
+      // UI form fields
+      $scope.sortFields = [
+          { label: "Sort Position", model: "sortPosition", type: "text", required: true },
+          { label: "Sort Value", model: "sortValue", type: "number", required: true },
+          { label: "Type", model: "type", type: "text" },
+          { label: "Operator Name", model: "operatorName", type: "text" },
+          { label: "Origin Date", model: "originDate", type: "date", required: true }
+      ];
+
+      // Popup message
+      $scope.showMessage = function(msg, type = "success", duration = 3000) {
+          $scope.statusMessage = msg;
+          $scope.statusType = type;
+
+          setTimeout(() => {
+              $scope.$apply(() => $scope.statusMessage = "");
+          }, duration);
+
+          if (type === "error") console.error(msg);
+      };
+
+      // ------------------ SAVE/CREATE ------------------
+      $scope.saveSort = function() {
+          console.log("📤 Saving Sort Position:", $scope.sort);
+
+          // Create API payload copy
+          let payload = angular.copy($scope.sort);
+
+          if (payload.originDate instanceof Date) {
+              payload.originDate = payload.originDate.toISOString().split("T")[0];
+          }
+          if ($scope.sort.originDate instanceof Date) {
+              $scope.sort.originDate = $scope.sort.originDate.toISOString().split("T")[0];
+          }
+
+          $http.post(API_BASE, $scope.sort)
+              .then(function() {
+                  $scope.showMessage("✅ Sort Position saved successfully!");
+                  $scope.resetSort();
+                  $scope.loadActiveSorts();
+              }, function(error) {
+                  console.error("❌ Error saving sort position:", error);
+                  $scope.showMessage("❌ Error saving sort position.", "error");
+              });
+      };
+
+      // ------------------ LOAD SINGLE ------------------
+      $scope.loadSort = function(s) {
+          $scope.sort = angular.copy(s);
+
+          if ($scope.sort.originDate) {
+              $scope.sort.originDate = new Date($scope.sort.originDate);
+          }
+
+          $scope.showMessage("✏️ Loaded for editing.");
+      };
+
+      // ------------------ SELECT ------------------
+      $scope.selectSort = function(s) {
+          $scope.selectedSort = s;
+          $scope.loadSort(s);
+      };
+
+      // ------------------ LOAD ACTIVE ------------------
+      $scope.loadActiveSorts = function() {
+          $http.get(API_BASE + "/active")
+              .then(function(response) {
+
+                  $scope.sorts = response.data.map(s => {
+                      if (s.originDate) {
+                          s.originDate = new Date(s.originDate);
+                      }
+                      return s;
+                  });
+
+              }, function(error) {
+                  $scope.showMessage("⚠️ Could not load data.", "warning");
+              });
+      };
+
+      $scope.loadActiveSorts();
+
+      // ------------------ ENABLE ROW EDIT MODE ------------------
+      $scope.editSort = function(s) {
+          $scope.sorts.forEach(row => row.isEditing = false);
+          s.backup = angular.copy(s);
+          s.isEditing = true;
+      };
+
+      // ------------------ SAVE ROW EDIT ------------------
+      $scope.saveRowSort = function(s) {
+          console.log("💾 Saving row:", s);
+
+          let payload = angular.copy(s);
+
+          if (payload.originDate instanceof Date) {
+              payload.originDate = payload.originDate.toISOString().split("T")[0];
+          }
+
+          let apiCall = s.recId
+              ? $http.put(`${API_BASE}/${s.recId}`, s)
+              : $http.post(API_BASE, s);
+
+          apiCall.then(function() {
+              s.isEditing = false;
+              delete s.backup;
+              $scope.showMessage(`✅ Saved!`);
+              $scope.loadActiveSorts();
+          }).catch(function(error) {
+              console.error("❌ Error:", error);
+
+              let msg = error.data?.message || "Unknown error";
+
+              $scope.showMessage(`❌ ${msg}`, "error");
+
+              if (s.backup) angular.extend(s, s.backup);
+          });
+      };
+
+      // ------------------ CANCEL EDIT ------------------
+      $scope.cancelEdit = function(s) {
+          angular.extend(s, s.backup);
+          s.isEditing = false;
+          delete s.backup;
+      };
+
+      // ------------------ DELETE ------------------
+      $scope.deleteRowSort = function(s) {
+          if (!s.recId) {
+              $scope.showMessage("⚠️ No recId found.", "warning");
+              return;
+          }
+
+          $http.put(`${API_BASE}/${s.recId}/delete`, s)
+              .then(function(response) {
+                  const idx = $scope.sorts.indexOf(s);
+                  if (idx !== -1) $scope.sorts.splice(idx, 1);
+                  let msg = response.data?.message || "Deleted";
+                  $scope.showMessage(`🗑️ ${msg}`);
+              }, function(error) {
+                  let msg = error.data?.message || "Unknown error";
+                  $scope.showMessage(`❌ ${msg}`, "error");
+              });
+      };
+
+  });
+
+</script>
+</body>
+</html>

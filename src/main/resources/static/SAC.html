@@ -1,0 +1,147 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.0/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    body {
+        background: linear-gradient(to right, #eef2f3, #8e9eab);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar {
+        background-color: #004080;
+    }
+    .navbar-brand, .nav-link {
+        color: #fff !important;
+    }
+    .dashboard-card {
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        padding: 2rem;
+        background-color: #ffffff;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        text-align: center;
+    }
+    /* Modern hover effect */
+    .dashboard-card:hover {
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 64, 128, 0.3);
+        background: linear-gradient(135deg, #004080, #0066cc);
+        color: white;
+    }
+    .dashboard-card:hover .dashboard-title,
+    .dashboard-card:hover .dashboard-icon {
+        color: white;
+    }
+    .dashboard-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        color: #004080;
+    }
+    .dashboard-icon {
+        font-size: 3rem;
+        color: #004080;
+        transition: transform 0.3s;
+    }
+    .dashboard-card:hover .dashboard-icon {
+        transform: rotate(10deg) scale(1.2);
+    }
+    /* Back button styling */
+    .back-button {
+        position: absolute;
+
+        background-color: #004080;
+        color: white;
+        border-radius: 50px;
+        padding: 0.4rem 1rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease-in-out;
+        text-decoration: none;
+    }
+
+    .back-button:hover {
+        background-color: #0066cc;
+        text-decoration: none;
+        transform: translateX(-2px);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        color: #fff;
+    }
+    footer {
+        text-align: center;
+        padding: 1rem;
+        margin-top: auto;
+        background-color: #004080;
+        color: white;
+    }
+</style>
+
+<body ng-controller="SacDashboardController">
+
+<!-- Main Container -->
+<div class="container py-4">
+
+    <!-- Back Button -->
+    <a href="#!/" class="back-button">
+        <i class="bi bi-arrow-left-circle"></i> Back
+    </a>
+
+    <!-- Page Header -->
+    <h2 class="text-center mb-lg-5 fw-bold text-dark ">SAC Dashboard</h2>
+
+    <!-- Row 1 -->
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <a href="#!/AODB" class="text-decoration-none">
+            <div class="dashboard-card">
+                <i class="bi bi-hdd-network dashboard-icon"></i>
+                <div class="dashboard-title">AODB</div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <div class="dashboard-card">
+                <i class="bi bi-server dashboard-icon"></i>
+                <div class="dashboard-title">MDS</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <a href="#!/dashBoard" class="text-decoration-none">
+            <div class="dashboard-card">
+                <i class="bi bi-cpu dashboard-icon"></i>
+                <div class="dashboard-title">Sortation</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row mt-2">
+        <div class="col-md-4">
+            <a href="#!/PLC01" class="text-decoration-none">
+            <div class="dashboard-card">
+                <i class="bi bi-gear-wide-connected dashboard-icon"></i>
+                <div class="dashboard-title">PLC-01</div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="#!/PLC02" class="text-decoration-none">
+            <div class="dashboard-card">
+                <i class="bi bi-gear-wide-connected dashboard-icon"></i>
+                <div class="dashboard-title">PLC-02</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
