@@ -784,8 +784,8 @@
           }
 
           let apiCall = s.recId
-              ? $http.put(`${API_BASE}/${s.recId}`, s)
-              : $http.post(API_BASE, s);
+              ? $http.put(`${API_BASE}/${s.recId}`, payload)
+              : $http.post(API_BASE, payload);
 
           apiCall.then(function() {
               s.isEditing = false;

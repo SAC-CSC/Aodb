@@ -306,7 +306,7 @@
         <div>
             <h5 class="section-title">Active Flights</h5>
             <div class="table-wrapper">
-                <table class="table">
+                <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
                         <th>S.No.</th>
@@ -560,7 +560,7 @@
     <div>
         <h5 class="section-title">Active Sort Positions</h5>
         <div class="table-wrapper">
-            <table class="table">
+            <table class="table table-bordered table-striped">
                 <thead>
                 <tr>
                     <th>S.No.</th>
@@ -574,7 +574,7 @@
                 </thead>
 
                 <tbody>
-                <tr ng-repeat="p in positions track by $index"
+                <tr ng-repeat="p in sorts track by $index"
                     ng-class="{ 'editing-row': p.isEditing }">
 
                     <td>{{ $index + 1 }}</td>
@@ -614,12 +614,12 @@
                             <button class="btn btn-sm btn-outline-primary"
                                     ng-click="editSort(p); $event.stopPropagation();">Edit</button>
                             <button class="btn btn-sm btn-danger"
-                                    ng-click="deleteSortRow(p); $event.stopPropagation();">Delete</button>
+                                    ng-click="deleteRowSort(p); $event.stopPropagation();">Delete</button>
                         </div>
 
                         <div ng-if="p.isEditing" class="d-flex justify-content-center gap-1">
                             <button class="btn btn-sm btn-success"
-                                    ng-click="saveSortRow(p); $event.stopPropagation();">Save</button>
+                                    ng-click="saveRowSort(p); $event.stopPropagation();">Save</button>
                             <button class="btn btn-sm btn-secondary"
                                     ng-click="cancelEdit(p); $event.stopPropagation();">Cancel</button>
                         </div>
