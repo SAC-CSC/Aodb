@@ -4,9 +4,9 @@
         background: linear-gradient(to right, #eef2f3, #dfe9f3);
         min-height: calc(100vh - 140px);
         padding: 20px;
-        margin-left: 170px; /* match sidebar width */
+        margin-left: -60px; /* match sidebar width */
         border-radius: 8px;
-        max-width: 1200px; /* keep consistent width on big screens */
+        width: 1660px; /* keep consistent width on big screens */
     }
 
     /* Section Titles */
@@ -225,16 +225,11 @@
     .sidebar a.nav-link.active { background-color: #198754; }
 
     /* Responsive */
-    @media (max-width: 992px) {
-        .sidebar {
-            position: relative;
-            width: 100%;
-            height: auto;
-            flex-direction: row;
-            justify-content: space-around;
-            padding: 0.5rem 0;
-        }
-        .dashboard-container { margin-left: 0; margin-top: 10px; }
+    @media (min-width: 992px) {
+        .dashboard-container { margin-left: 138px; margin-top: 5px;  width: 1260px;}
+    }
+    @media (min-width: 1800px) {
+        .dashboard-container { margin-left: -60px; margin-top: 5px;  width: 1660px;}
     }
 
 </style>
